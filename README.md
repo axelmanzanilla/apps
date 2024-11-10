@@ -1,0 +1,2 @@
+# apps
+My Odoo modules
