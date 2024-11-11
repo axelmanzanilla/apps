@@ -1,0 +1,89 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* main_menu
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 16.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-10-20 20:13+0000\n"
+"PO-Revision-Date: 2024-10-20 20:13+0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Plural-Forms: \n"
+
+#. module: base
+#: model:ir.module.module,description:base.module_main_menu
+msgid ""
+"\n"
+"This module provides a centralized main menu for Odoo Community Edition, allowing users to quickly access core modules and enhance their workflow.\n"
+"It features widget functionality for displaying the current date and posting announcements, which can be managed by administrators.\n"
+msgstr ""
+"\n"
+"Este módulo proporciona un menú principal centralizado para Odoo Community Edition, permitiendo a los usuarios acceder rápidamente a los módulos principales y mejorar su flujo de trabajo.\n"
+"Cuenta con funcionalidad de widgets para mostrar la fecha actual y publicar anuncios, que pueden ser gestionados por los administradores.\n"
+
+#. module: base
+#: model:ir.module.module,summary:base.module_main_menu
+msgid "Main Menu module for Odoo Community Edition."
+msgstr "Módulo de menú principal para Odoo Community Edition."
+
+#. module: base
+#: model:ir.module.module,shortdesc:base.module_main_menu
+msgid "Main Menu"
+msgstr "Menú Principal"
+
+#. module: main_menu
+#: model:ir.model.fields,field_description:main_menu.field_res_company__announcement
+msgid "Announcement"
+msgstr "Anuncio"
+
+#. module: main_menu
+#: model:ir.model,name:main_menu.model_res_company
+msgid "Companies"
+msgstr "Compañías"
+
+#. module: main_menu
+#: model:ir.model,name:main_menu.model_res_config_settings
+msgid "Config Settings"
+msgstr "Ajustes de configuración"
+
+#. module: main_menu
+#: model_terms:ir.ui.view,arch_db:main_menu.res_config_settings_view_form
+msgid "Main Menu"
+msgstr "Menú Principal"
+
+#. module: main_menu
+#: model:ir.actions.client,name:main_menu.main_menu_action
+#: model:ir.ui.menu,name:main_menu.main_menu_root
+#: model_terms:ir.ui.view,arch_db:main_menu.res_config_settings_view_form
+msgid "Menu"
+msgstr "Menú"
+
+#. module: main_menu
+#. odoo-javascript
+#: code:addons/main_menu/static/src/components/widget_announcement/widget_announcement.xml:0
+#, python-format
+msgid "Post an announcement"
+msgstr "Publica un anuncio"
+
+#. module: main_menu
+#. odoo-javascript
+#: code:addons/main_menu/static/src/components/widget_announcement/widget_announcement.xml:0
+#, python-format
+msgid "Save"
+msgstr "Guardar"
+
+#. module: main_menu
+#: model:ir.model.fields,field_description:main_menu.field_res_company__show_widgets
+#: model:ir.model.fields,field_description:main_menu.field_res_config_settings__show_widgets
+msgid "Show Widgets"
+msgstr "Mostrar Widgets"
+
+#. module: main_menu
+#: model_terms:ir.ui.view,arch_db:main_menu.res_config_settings_view_form
+msgid "Show widget panel with the date and the announcements."
+msgstr "Muestra el panel de widgets con la fecha y los anuncios."
