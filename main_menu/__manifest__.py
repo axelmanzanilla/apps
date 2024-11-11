@@ -13,7 +13,7 @@
     "license": "LGPL-3",
     "category": "Technical/Technical",
     "depends": [
-        "mail",
+        "web",
     ],
     "data": [
         "security/ir.model.access.csv",

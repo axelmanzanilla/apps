@@ -1,10 +1,9 @@
-/** @odoo-module **/
-
 import { Component, onWillStart } from "@odoo/owl";
 import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
 import { WidgetHour } from "@main_menu/components/widget_hour/widget_hour";
 import { WidgetAnnouncement } from "@main_menu/components/widget_announcement/widget_announcement";
+import { user } from "@web/core/user";
 import { standardActionServiceProps } from "@web/webclient/actions/action_service";
 
 class MenuAction extends Component {
@@ -14,7 +13,6 @@ class MenuAction extends Component {
 
     setup() {
         this.orm = useService("orm");
-        this.user = useService("user");
         this.menuService = useService("menu");
         const companyService = useService("company");
         this.currentCompanyId = companyService.currentCompany.id
@@ -25,7 +23,7 @@ class MenuAction extends Component {
 
         onWillStart(async () => {
             try {
-                this.userIsAdmin = await this.user.hasGroup("base.group_system");
+                this.userIsAdmin = await user.hasGroup("base.group_system");
                 const res = await this.orm.searchRead(
                     "res.company",
                     [["id", "=", this.currentCompanyId]],

@@ -1,17 +1,8 @@
-/** @odoo-module **/
-
 import { Component } from "@odoo/owl";
-import { useService } from "@web/core/utils/hooks";
+import { user } from "@web/core/user";
 
 export class WidgetHour extends Component {
-    static props = {
-        userIsAdmin: Boolean,
-        announcement: String,
-    };
-    static template = "main_menu.WidgetHour";
-
     setup() {
-        this.user = useService("user");
         this.getDateTime();
         this.updateHour = setInterval(() => {
             this.getDateTime();
@@ -20,7 +11,7 @@ export class WidgetHour extends Component {
     }
 
     getDateTime(){
-        const lang = this.user.context.lang.replace("_", "-");
+        const lang = user.context.lang.replace("_", "-");
         this.currentTime = new Date().toLocaleTimeString();
         try {
             this.currentDate = new Date().toLocaleDateString(lang, {
@@ -39,3 +30,5 @@ export class WidgetHour extends Component {
         clearInterval(this.updateHour);
     }
 }
+
+WidgetHour.template = "main_menu.WidgetHour";

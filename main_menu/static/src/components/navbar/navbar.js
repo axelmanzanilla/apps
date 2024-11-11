@@ -1,5 +1,3 @@
-/** @odoo-module **/
-
 import { patch } from "@web/core/utils/patch";
 import { NavBar } from "@web/webclient/navbar/navbar";
 
@@ -10,6 +8,6 @@ patch(NavBar.prototype, {
         this.menuApp = root.find(app => app.xmlid === "main_menu.main_menu_root");
     },
     onClickMenu() {
-        this.onNavBarDropdownItemSelection(this.menuApp);
+        this._onMenuClicked(this.menuApp);
     },
 });

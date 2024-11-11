@@ -1,12 +1,11 @@
-/** @odoo-module **/
-
+import { rpc } from "@web/core/network/rpc";
 import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
 import { Component, onMounted } from "@odoo/owl";
 import { Deferred } from "@web/core/utils/concurrency";
 import { Dropdown } from "@web/core/dropdown/dropdown";
 import { DropdownItem } from "@web/core/dropdown/dropdown_item";
-import { useDiscussSystray } from "@mail/utils/common/hooks";
+import { useDropdownState } from "@web/core/dropdown/dropdown_hooks";
 
 export class Bookmark extends Component {
     static components = { Dropdown, DropdownItem };
@@ -14,9 +13,8 @@ export class Bookmark extends Component {
     static template = "main_menu.Bookmark";
 
     setup() {
-        this.discussSystray = useDiscussSystray();
         this.action = useService("action");
-        this.rpc = useService("rpc");
+        this.dropdown = useDropdownState();
         this.fetchDeferred = new Deferred();
         this.bookmarks = [];
 
@@ -26,6 +24,7 @@ export class Bookmark extends Component {
     }
 
     openMyBookmarks() {
+        this.dropdown.close();
         this.action.doAction("main_menu.menu_bookmark_action_my_bookmarks", { clearBreadcrumbs: true });
     }
 
@@ -41,7 +40,7 @@ export class Bookmark extends Component {
 
     async fetchBookmarks() {
         const fetchDeferred = this.fetchDeferred;
-        this.rpc("/web/menu_bookmark/data").then(
+        rpc("/web/menu_bookmark/data").then(
             (data) => {
                 this.bookmarks = data;
                 fetchDeferred.resolve(data);

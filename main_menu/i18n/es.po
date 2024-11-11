@@ -4,10 +4,10 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: Odoo Server 17.0\n"
+"Project-Id-Version: Odoo Server 18.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2024-10-20 20:13+0000\n"
-"PO-Revision-Date: 2024-10-20 20:13+0000\n"
+"POT-Creation-Date: 2024-10-20 01:46+0000\n"
+"PO-Revision-Date: 2024-10-20 01:46+0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "MIME-Version: 1.0\n"
@@ -41,7 +41,6 @@ msgstr "Menú Principal"
 #. module: main_menu
 #. odoo-javascript
 #: code:addons/main_menu/static/src/components/add_bookmark/add_bookmark.xml:0
-#, python-format
 msgid "Add Bookmark"
 msgstr "Agregar Marcador"
 
@@ -58,7 +57,7 @@ msgstr "Marcador"
 #. module: main_menu
 #: model:ir.actions.act_window,name:main_menu.menu_bookmark_action_my_bookmarks
 #: model:ir.model.fields,field_description:main_menu.field_res_users__menu_bookmark_ids
-#: model_terms:ir.ui.view,arch_db:main_menu.menu_bookmark_view_tree
+#: model_terms:ir.ui.view,arch_db:main_menu.menu_bookmark_view_list
 msgid "Bookmarks"
 msgstr "Marcadores"
 
@@ -137,14 +136,12 @@ msgstr "Nueva pestaña"
 #. module: main_menu
 #. odoo-javascript
 #: code:addons/main_menu/static/src/components/widget_announcement/widget_announcement.xml:0
-#, python-format
 msgid "Post an announcement"
 msgstr "Publica un anuncio"
 
 #. module: main_menu
 #. odoo-javascript
 #: code:addons/main_menu/static/src/components/widget_announcement/widget_announcement.xml:0
-#, python-format
 msgid "Save"
 msgstr "Guardar"
 
@@ -183,6 +180,5 @@ msgstr "Usuario"
 #. module: main_menu
 #. odoo-javascript
 #: code:addons/main_menu/static/src/components/bookmark/bookmark.xml:0
-#, python-format
 msgid "View all bookmarks"
 msgstr "Ver todos los marcadores"
