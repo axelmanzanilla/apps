@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <templates>
-    <t t-name="main_menu.MainMenu" owl="1">
+    <t t-name="main_menu.MainMenu">
         <div class="background" t-att-style="'background: conic-gradient(from ' + deg + ', #71639e, #8274AF)'"/>
         <div class="main-menu">
             <div class="widgets" t-if="showWidgets">

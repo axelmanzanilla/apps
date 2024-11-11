@@ -5,8 +5,13 @@ import { registry } from "@web/core/registry";
 import { useService } from "@web/core/utils/hooks";
 import { WidgetHour } from "@main_menu/components/widget_hour/widget_hour";
 import { WidgetAnnouncement } from "@main_menu/components/widget_announcement/widget_announcement";
+import { standardActionServiceProps } from "@web/webclient/actions/action_service";
 
 class MenuAction extends Component {
+    static components = { WidgetHour, WidgetAnnouncement };
+    static props = {...standardActionServiceProps};
+    static template = "main_menu.MainMenu";
+
     setup() {
         this.orm = useService("orm");
         this.user = useService("user");
@@ -52,9 +57,6 @@ class MenuAction extends Component {
         }
     }
 }
-
-MenuAction.components = { WidgetHour, WidgetAnnouncement };
-MenuAction.template = "main_menu.MainMenu";
 
 registry
     .category("actions")

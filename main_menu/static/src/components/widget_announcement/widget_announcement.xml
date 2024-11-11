@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <templates>
-    <t t-name="main_menu.WidgetAnnouncement" owl="1">
+    <t t-name="main_menu.WidgetAnnouncement">
         <div class="widget-announcement">
             <textarea
                 t-if="props.userIsAdmin"

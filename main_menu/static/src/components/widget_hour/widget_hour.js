@@ -4,6 +4,12 @@ import { Component } from "@odoo/owl";
 import { useService } from "@web/core/utils/hooks";
 
 export class WidgetHour extends Component {
+    static props = {
+        userIsAdmin: Boolean,
+        announcement: String,
+    };
+    static template = "main_menu.WidgetHour";
+
     setup() {
         this.user = useService("user");
         this.getDateTime();
@@ -33,5 +39,3 @@ export class WidgetHour extends Component {
         clearInterval(this.updateHour);
     }
 }
-
-WidgetHour.template = "main_menu.WidgetHour";

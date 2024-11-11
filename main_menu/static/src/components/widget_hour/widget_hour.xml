@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <templates>
-    <t t-name="main_menu.WidgetHour" owl="1">
+    <t t-name="main_menu.WidgetHour">
         <div
             class="widget-hour"
             t-attf-class="#{props.userIsAdmin ? 'widget-hour-mobile' : props.announcement ? 'widget-hour-mobile' : 'w-100'}">
